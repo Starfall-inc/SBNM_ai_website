@@ -2,9 +2,9 @@ services:
   web:
     build: .
     ports:
-      - "3000:3000"
+      - "6745:6745"
     environment:
       - GROQ_API_KEY=${GROQ_API_KEY:-}
-      - PORT=${PORT:-3000}
+      - PORT=${PORT:-6745}
     restart: unless-stopped
     container_name: sbnm-poly-web
