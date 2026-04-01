@@ -36,6 +36,14 @@ app.use((req, res, next) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
-  console.log(`GROQ_API_KEY: ${process.env.GROQ_API_KEY || 'Not Found'}`);
+  console.log(`\n🚀 SBNM Polytechnic Server Started!`);
+  console.log(`🔗 Local Address: http://localhost:${PORT}`);
+  
+  if (process.env.GROQ_API_KEY) {
+    console.log(`✅ SBNM AI: Online (Groq Cloud Active)`);
+  } else {
+    console.log(`⚠️  SBNM AI: Running in Offline Fallback Mode (API Key Missing)`);
+    console.log(`👉 Add GROQ_API_KEY to your .env to enable full AI features.`);
+  }
+  console.log('-------------------------------------------\n');
 });
