@@ -1,0 +1,116 @@
+<!-- PAGE HERO -->
+<div class="page-hero">
+    <div class="pw">
+        <div class="ph-inner" data-aos="fade-up">
+            <div class="sec-tag"><i class="fas fa-images"></i> Campus Life</div>
+            <h1 class="sec-h">Life at <span>SBNM Campus</span></h1>
+            <p class="sec-sub">Explore our campus at Gevrai Tanda, Paithan Road — labs, events, sports, and student life.</p>
+        </div>
+    </div>
+</div>
+
+<!-- GALLERY -->
+<section class="sec">
+    <div class="pw">
+        <div class="gf-bar" data-aos="fade-up">
+            <button class="gf active" data-cat="all">All</button>
+            <button class="gf" data-cat="campus">Campus</button>
+            <button class="gf" data-cat="labs">Labs</button>
+            <button class="gf" data-cat="events">Events</button>
+            <button class="gf" data-cat="sports">Sports</button>
+            <button class="gf" data-cat="placement">Placement</button>
+        </div>
+        <div class="gal-grid" id="galGrid">
+            <% const items = [
+              { cat:'campus',    icon:'fa-university', color:'#1a5c38', label:'SBNM Main Building',    sz:'large' },
+              { cat:'labs',      icon:'fa-laptop-code',color:'#0369a1', label:'Computer Lab',           sz:'' },
+              { cat:'events',    icon:'fa-music',      color:'#b91c1c', label:'Annual Cultural Fest',   sz:'' },
+              { cat:'labs',      icon:'fa-seedling',   color:'#15803d', label:'Food Tech Lab',           sz:'large' },
+              { cat:'campus',    icon:'fa-tree',       color:'#1a5c38', label:'Campus Garden',          sz:'' },
+              { cat:'labs',      icon:'fa-flask',      color:'#7c3aed', label:'Research Centre',        sz:'' },
+              { cat:'sports',    icon:'fa-running',    color:'#b45309', label:'Annual Sports Meet',     sz:'' },
+              { cat:'placement', icon:'fa-handshake',  color:'#0369a1', label:'Campus Placement Drive', sz:'' },
+              { cat:'events',    icon:'fa-award',      color:'#b45309', label:'Techfest 2025',          sz:'large' },
+              { cat:'campus',    icon:'fa-book',       color:'#1a5c38', label:'College Library',        sz:'' },
+              { cat:'sports',    icon:'fa-trophy',     color:'#b91c1c', label:'Inter-College Tournament',sz:'' },
+              { cat:'placement', icon:'fa-briefcase',  color:'#15803d', label:'Industry Visit 2025',    sz:'' },
+            ]; %>
+            <% items.forEach((it,i) => { %>
+            <div class="gi <%= it.sz==='large'?'gi-lg':'' %>" data-cat="<%= it.cat %>" data-aos="zoom-in" data-aos-delay="<%= (i%4)*70 %>">
+                <div class="gi-inner" style="background:linear-gradient(135deg,<%= it.color %>22,<%= it.color %>44)">
+                    <i class="fas <%= it.icon %>" style="color:<%= it.color %>"></i>
+                    <div class="gi-ov"><span class="gi-lbl"><%= it.label %></span><span class="gi-cat"><%= it.cat %></span></div>
+                </div>
+            </div>
+            <% }) %>
+        </div>
+    </div>
+</section>
+
+<!-- FACILITIES -->
+<section class="sec" style="background:white">
+    <div class="pw">
+        <div class="sec-center mb48" data-aos="fade-up">
+            <div class="sec-tag gold"><i class="fas fa-building"></i> Facilities</div>
+            <h2 class="sec-h">Modern <span>Campus Facilities</span></h2>
+        </div>
+        <div class="fac-grid">
+            <% const facs = [
+              { icon:'fa-desktop',  color:'#0369a1', name:'Computer Labs',      n:'3+',   d:'Well-equipped computer labs with internet access' },
+              { icon:'fa-seedling', color:'#15803d', name:'Food Tech Lab',       n:'1',    d:'Dedicated food processing & sensory evaluation lab' },
+              { icon:'fa-flask',    color:'#7c3aed', name:'Research Centre',     n:'1',    d:'Applied engineering research across all departments' },
+              { icon:'fa-book',     color:'#1a5c38', name:'Library',             n:'5000+',d:'Technical books, journals and digital resources' },
+              { icon:'fa-futbol',   color:'#b45309', name:'Sports Grounds',      n:'3+',   d:'Cricket, Football, Volleyball & Athletics' },
+              { icon:'fa-bus',      color:'#b91c1c', name:'Transport',           n:'Routes',d:'Bus facilities connecting surrounding areas' },
+            ]; %>
+            <% facs.forEach((f,i) => { %>
+            <div class="fac-card card" data-aos="fade-up" data-aos-delay="<%= i*70 %>">
+                <div class="fac-ic" style="background:<%= f.color %>14;color:<%= f.color %>"><i class="fas <%= f.icon %>"></i></div>
+                <div class="fac-n" style="color:<%= f.color %>"><%= f.n %></div>
+                <h3 class="fac-name"><%= f.name %></h3>
+                <p class="fac-d"><%= f.d %></p>
+            </div>
+            <% }) %>
+        </div>
+    </div>
+</section>
+
+<style>
+.page-hero { background:linear-gradient(140deg,#edfbf2 0%,#fefefe 55%,#fefbe8 100%);padding:72px 0 56px;border-bottom:1px solid var(--border); }
+.ph-inner { text-align:center; }
+.sec{padding:72px 0} .sec-center{text-align:center} .mb48{margin-bottom:48px}
+.gf-bar { display:flex;gap:8px;flex-wrap:wrap;margin-bottom:32px; }
+.gf { padding:8px 18px;border:1.5px solid var(--border);border-radius:100px;background:white;font-size:.83rem;font-weight:600;cursor:pointer;transition:all .2s;color:var(--text);font-family:inherit; }
+.gf:hover,.gf.active { background:var(--primary);border-color:var(--primary);color:white; }
+.gal-grid { display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:180px;gap:14px; }
+.gi { border-radius:15px;overflow:hidden;cursor:pointer; }
+.gi-lg { grid-column:span 2;grid-row:span 2; }
+.gi-inner { width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:2.6rem;position:relative;transition:transform .3s; }
+.gi:hover .gi-inner { transform:scale(1.04); }
+.gi-ov { position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.62));padding:18px 14px 13px;opacity:0;transition:opacity .3s;color:white; }
+.gi:hover .gi-ov { opacity:1; }
+.gi-lbl { display:block;font-weight:700;font-size:.88rem; }
+.gi-cat { display:inline-block;background:rgba(255,255,255,.2);border-radius:100px;padding:2px 8px;font-size:.7rem;text-transform:capitalize;margin-top:3px; }
+.gi.hidden { display:none; }
+.fac-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:20px; }
+.fac-card { padding:28px 22px;text-align:center; }
+.fac-ic { width:54px;height:54px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin:0 auto 14px; }
+.fac-n { font-family:'Poppins';font-size:1.9rem;font-weight:900;margin-bottom:7px; }
+.fac-name { font-family:'Poppins';font-size:.93rem;font-weight:700;color:var(--dark);margin-bottom:7px; }
+.fac-d { font-size:.81rem;color:var(--muted); }
+@media(max-width:900px) { .gal-grid{grid-template-columns:1fr 1fr;grid-auto-rows:150px} .gi-lg{grid-column:span 1;grid-row:span 1} }
+@media(max-width:640px) { .fac-grid{grid-template-columns:1fr 1fr} }
+@media(max-width:420px) { .gal-grid{grid-template-columns:1fr} .fac-grid{grid-template-columns:1fr} }
+</style>
+<script>
+document.querySelectorAll('.gf').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+        document.querySelectorAll('.gf').forEach(b=>b.classList.remove('active'));
+        btn.classList.add('active');
+        const f=btn.dataset.cat;
+        document.querySelectorAll('.gi').forEach(el=>{
+            el.classList.toggle('hidden', f!=='all' && el.dataset.cat!==f);
+        });
+    });
+});
+</script>

@@ -1,0 +1,161 @@
+<!-- PAGE HERO -->
+<div class="page-hero">
+    <div class="pw">
+        <div class="ph-inner" data-aos="fade-up">
+            <div class="sec-tag"><i class="fas fa-book"></i> Programmes</div>
+            <h1 class="sec-h">Diploma <span>Courses</span> at SBNM</h1>
+            <p class="sec-sub">Five MSBTE-affiliated 3-year diploma programmes — including the unique <strong>Food Technology</strong> branch.</p>
+        </div>
+    </div>
+</div>
+
+<!-- COURSES -->
+<section class="sec">
+    <div class="pw">
+        <%
+        const all = [
+          {
+            icon:'fa-laptop-code', color:'#1a5c38', bg:'rgba(26,92,56,0.08)', code:'CO', seats:60,
+            name:'Computer Science Engineering',
+            desc:'Build expertise in programming, data structures, web technology, networking, and AI fundamentals for a career in software and IT.',
+            subjects:['C / C++ Programming','Data Structures','DBMS','Web Technology','Computer Networks','AI & Machine Learning Basics'],
+            careers:['Software Developer','Web Developer','Database Admin','Network Engineer'],
+            labs:['Programming Lab x3','Networking Lab','Project Lab']
+          },
+          {
+            icon:'fa-cogs', color:'#b45309', bg:'rgba(180,83,9,0.08)', code:'ME', seats:60,
+            name:'Mechanical Engineering',
+            desc:'Master thermodynamics, machine design, manufacturing processes, and CAD/CAM to build a career in core mechanical industries.',
+            subjects:['Engineering Drawing','Thermodynamics','Manufacturing Processes','Machine Design','Fluid Mechanics','CAD/CAM'],
+            careers:['Mechanical Engineer','Production Engineer','Design Engineer','Quality Control'],
+            labs:['Workshop','Fluid Mechanics Lab','CAD Lab','Metrology Lab']
+          },
+          {
+            icon:'fa-hard-hat', color:'#0369a1', bg:'rgba(3,105,161,0.08)', code:'CE', seats:60,
+            name:'Civil Engineering',
+            desc:'Learn surveying, structural analysis, concrete technology, and project management for infrastructure and construction careers.',
+            subjects:['Surveying','Structural Analysis','Concrete Technology','Soil Mechanics','AutoCAD','Project Management'],
+            careers:['Civil Engineer','Site Engineer','Structural Designer','Project Coordinator'],
+            labs:['Survey Lab','Material Testing Lab','AutoCAD Lab','Hydraulics Lab']
+          },
+          {
+            icon:'fa-bolt', color:'#7c3aed', bg:'rgba(124,58,237,0.08)', code:'EE', seats:60,
+            name:'Electrical Engineering',
+            desc:'Study electrical machines, power systems, PLC programming, and industrial drives to power up your engineering career.',
+            subjects:['Electrical Machines','Power Systems','Control Systems','PLC & Automation','Power Electronics','Electrical Estimation'],
+            careers:['Electrical Engineer','PLC Programmer','Maintenance Engineer','Power Systems Analyst'],
+            labs:['Electrical Machines Lab','Power Electronics Lab','PLC Lab','Control Lab']
+          },
+          {
+            icon:'fa-seedling', color:'#15803d', bg:'rgba(21,128,61,0.08)', code:'FT', seats:60,
+            name:'Food Technology',
+            desc:'A unique offering — study food composition, safety, processing, sensory evaluation, and quality control for the booming food industry.',
+            subjects:['Food Chemistry','Food Microbiology','Food Processing','Sensory Evaluation','Food Safety & Quality','Packaging Technology'],
+            careers:['Food Technologist','Quality Control Officer','Food Safety Auditor','Production Supervisor'],
+            labs:['Food Processing Lab','Microbiology Lab','Sensory Evaluation Lab','Research Centre']
+          },
+        ];
+        all.forEach((c,i) => { %>
+        <div class="cdc" data-aos="fade-up" data-aos-delay="<%= (i%2)*80 %>">
+            <div class="cdc-head" style="background:linear-gradient(135deg,<%= c.color %>12,<%= c.color %>06)">
+                <div class="cdc-icon" style="background:<%= c.bg %>;color:<%= c.color %>"><i class="fas <%= c.icon %>"></i></div>
+                <div class="cdc-meta">
+                    <div class="cdc-code" style="color:<%= c.color %>">DIPLOMA — <%= c.name.toUpperCase() %> · <%= c.code %></div>
+                    <h2 class="cdc-name"><%= c.name %></h2>
+                    <div class="cdc-tags">
+                        <span><i class="fas fa-clock"></i> 3 Years (6 Sems)</span>
+                        <span><i class="fas fa-users"></i> <%= c.seats %> Seats</span>
+                        <span><i class="fas fa-certificate"></i> MSBTE</span>
+                    </div>
+                </div>
+                <div class="cdc-seats" style="background:<%= c.color %>"><%= c.seats %><br><small>Seats</small></div>
+            </div>
+            <div class="cdc-body">
+                <p class="cdc-desc"><%= c.desc %></p>
+                <div class="cdc-cols">
+                    <div>
+                        <div class="cdc-col-h"><i class="fas fa-book-open" style="color:<%= c.color %>"></i> Key Subjects</div>
+                        <div class="tag-row"><% c.subjects.forEach(s => { %><span class="tag" style="background:<%= c.bg %>;color:<%= c.color %>"><%= s %></span><% }) %></div>
+                    </div>
+                    <div>
+                        <div class="cdc-col-h"><i class="fas fa-briefcase" style="color:<%= c.color %>"></i> Career Paths</div>
+                        <div class="tag-row"><% c.careers.forEach(cr => { %><span class="tag" style="background:rgba(26,92,56,.06);color:var(--primary)"><i class="fas fa-check-circle"></i> <%= cr %></span><% }) %></div>
+                    </div>
+                    <div>
+                        <div class="cdc-col-h"><i class="fas fa-flask" style="color:<%= c.color %>"></i> Labs</div>
+                        <div class="tag-row"><% c.labs.forEach(l => { %><span class="tag" style="background:rgba(3,105,161,.07);color:#0369a1"><i class="fas fa-vial"></i> <%= l %></span><% }) %></div>
+                    </div>
+                </div>
+                <a href="/admissions" class="apply-btn" style="background:<%= c.color %>">Apply for <%= c.code %> <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+        <% }) %>
+    </div>
+</section>
+
+<!-- FEE TABLE -->
+<section class="sec" style="background:white">
+    <div class="pw">
+        <div class="sec-center mb48" data-aos="fade-up">
+            <div class="sec-tag"><i class="fas fa-rupee-sign"></i> Fee Structure</div>
+            <h2 class="sec-h">Affordable <span>Quality Education</span></h2>
+        </div>
+        <div class="fee-wrap" data-aos="fade-up">
+            <table class="fee-tbl">
+                <thead><tr><th>Programme</th><th>Annual Fees</th><th>Duration</th><th>Scholarships</th><th></th></tr></thead>
+                <tbody>
+                    <% all.forEach(c => { %>
+                    <tr>
+                        <td><strong><%= c.name %></strong></td>
+                        <td class="fee-amt">~₹25,000/year</td>
+                        <td>3 Years</td>
+                        <td><span class="sc-tag">Available</span></td>
+                        <td><a href="/admissions" class="tbl-link">Apply →</a></td>
+                    </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+        </div>
+        <div class="fee-note" data-aos="fade-up"><i class="fas fa-info-circle"></i> Maharashtra Govt, EBC, OBC, SC/ST scholarships available. Contact the admissions office for exact current fee figures.</div>
+    </div>
+</section>
+
+<style>
+.page-hero { background:linear-gradient(140deg,#edfbf2 0%,#fefefe 55%,#fefbe8 100%);padding:72px 0 56px;border-bottom:1px solid var(--border); }
+.ph-inner { text-align:center; }
+.sec { padding:72px 0; }
+.sec-center { text-align:center; }
+.mb48 { margin-bottom:48px; }
+.cdc { background:white;border-radius:22px;border:1px solid var(--border);overflow:hidden;margin-bottom:28px;transition:transform .3s,box-shadow .3s; }
+.cdc:hover { transform:translateY(-4px);box-shadow:0 18px 48px rgba(26,92,56,0.1); }
+.cdc-head { padding:26px 28px;display:flex;align-items:center;gap:18px;flex-wrap:wrap; }
+.cdc-icon { width:60px;height:60px;border-radius:15px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex-shrink:0; }
+.cdc-meta { flex-grow:1; }
+.cdc-code { font-size:0.7rem;font-weight:700;letter-spacing:.07em;margin-bottom:5px; }
+.cdc-name { font-family:'Poppins';font-size:1.25rem;font-weight:800;color:var(--dark);margin-bottom:10px; }
+.cdc-tags { display:flex;gap:16px;flex-wrap:wrap;font-size:0.8rem;color:var(--muted); }
+.cdc-tags span { display:flex;align-items:center;gap:5px; }
+.cdc-seats { border-radius:12px;padding:12px 18px;color:white;text-align:center;font-family:'Poppins';font-size:2rem;font-weight:900;line-height:1.1;flex-shrink:0; }
+.cdc-seats small { font-size:0.65rem;font-weight:600;opacity:.9; }
+.cdc-body { padding:24px 28px;border-top:1px solid var(--border); }
+.cdc-desc { color:var(--muted);line-height:1.8;margin-bottom:22px;font-size:0.9rem; }
+.cdc-cols { display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-bottom:22px; }
+.cdc-col-h { font-size:0.83rem;font-weight:700;color:var(--dark);margin-bottom:10px;display:flex;align-items:center;gap:7px; }
+.tag-row { display:flex;flex-wrap:wrap;gap:7px; }
+.tag { padding:4px 11px;border-radius:100px;font-size:0.76rem;font-weight:600;display:flex;align-items:center;gap:5px; }
+.apply-btn { display:inline-flex;align-items:center;gap:8px;padding:11px 22px;color:white;border-radius:10px;font-weight:700;font-size:0.88rem;text-decoration:none;transition:all .3s; }
+.apply-btn:hover { opacity:.88;transform:translateX(4px); }
+.fee-wrap { overflow-x:auto;border-radius:14px;border:1px solid var(--border); }
+.fee-tbl { width:100%;border-collapse:collapse;font-size:0.88rem; }
+.fee-tbl th { background:var(--primary);color:white;padding:15px 18px;text-align:left;font-size:0.8rem;font-weight:600; }
+.fee-tbl td { padding:14px 18px;border-bottom:1px solid var(--border);color:var(--muted); }
+.fee-tbl tr:last-child td { border-bottom:none; }
+.fee-tbl tr:hover td { background:var(--bg); }
+.fee-amt { font-weight:700;color:var(--dark); }
+.sc-tag { background:rgba(21,128,61,.1);color:#15803d;padding:3px 10px;border-radius:100px;font-size:0.76rem;font-weight:600; }
+.tbl-link { color:var(--primary);font-weight:600;text-decoration:none; }
+.tbl-link:hover { color:var(--accent-dark); }
+.fee-note { display:flex;align-items:flex-start;gap:10px;background:rgba(26,92,56,.06);border-radius:11px;padding:14px 18px;color:var(--muted);font-size:0.84rem;margin-top:18px; }
+.fee-note i { color:var(--primary);flex-shrink:0;margin-top:2px; }
+@media(max-width:768px) { .cdc-cols { grid-template-columns:1fr; } .cdc-head { flex-wrap:wrap; } .cdc-seats { align-self:flex-start; } }
+</style>

@@ -1,0 +1,153 @@
+<!-- PAGE HERO -->
+<div class="page-hero">
+    <div class="pw">
+        <div class="ph-inner" data-aos="fade-up">
+            <div class="sec-tag"><i class="fas fa-envelope"></i> Get in Touch</div>
+            <h1 class="sec-h">Contact <span>SBNM Polytechnic</span></h1>
+            <p class="sec-sub">We're at Gevrai Tanda, Paithan Road, Aurangabad. Reach us for admissions, academic, or general queries.</p>
+        </div>
+    </div>
+</div>
+
+<!-- CONTACT LAYOUT -->
+<section class="sec">
+    <div class="pw">
+        <div class="contact-layout">
+            <!-- INFO CARDS -->
+            <div class="ci-col" data-aos="fade-right">
+                <div class="ci-card" style="border-top:4px solid var(--primary)">
+                    <div class="ci-ic" style="color:var(--primary);background:rgba(26,92,56,.1)"><i class="fas fa-map-marker-alt"></i></div>
+                    <h3>Address</h3>
+                    <p>Gevrai Tanda, Paithan Road,<br>Aurangabad, Maharashtra</p>
+                </div>
+                <div class="ci-card" style="border-top:4px solid var(--accent-dark)">
+                    <div class="ci-ic" style="color:var(--accent-dark);background:rgba(217,119,6,.1)"><i class="fas fa-phone-alt"></i></div>
+                    <h3>Phone</h3>
+                    <p>+91 240 230 3030</p>
+                </div>
+                <div class="ci-card" style="border-top:4px solid #0369a1">
+                    <div class="ci-ic" style="color:#0369a1;background:rgba(3,105,161,.1)"><i class="fas fa-envelope"></i></div>
+                    <h3>Email</h3>
+                    <p>info@sbnmpoly.org</p>
+                </div>
+                <div class="ci-card" style="border-top:4px solid #15803d">
+                    <div class="ci-ic" style="color:#15803d;background:rgba(21,128,61,.1)"><i class="fas fa-clock"></i></div>
+                    <h3>Office Hours</h3>
+                    <p>Monday – Saturday<br>9:00 AM – 5:00 PM</p>
+                </div>
+                <div class="dept-box" style="grid-column:span 2">
+                    <div class="db-head">Department Contacts</div>
+                    <% const depts=[
+                      {name:'Admissions Office',phone:'+91 240 230 3030'},
+                      {name:'Principal Office',phone:'+91 240 230 3031'},
+                      {name:'Computer Dept.',phone:'+91 240 230 3032'},
+                      {name:'Food Technology',phone:'+91 240 230 3033'},
+                    ]; %>
+                    <% depts.forEach(d=>{ %>
+                    <div class="db-row">
+                        <span><i class="fas fa-phone-square" style="color:var(--accent-dark)"></i> <%= d.name %></span>
+                        <span style="color:var(--primary);font-weight:600"><%= d.phone %></span>
+                    </div>
+                    <% }) %>
+                </div>
+            </div>
+
+            <!-- FORM -->
+            <div class="cf-wrap" data-aos="fade-left" data-aos-delay="80">
+                <div class="cform-card">
+                    <h2 style="font-family:'Poppins';font-size:1.35rem;font-weight:800;color:var(--dark);margin-bottom:6px">Send a Message</h2>
+                    <p style="color:var(--muted);font-size:.86rem;margin-bottom:26px">We'll respond within 24 hours.</p>
+                    <form id="cForm">
+                        <div class="fg-row">
+                            <div class="fg"><label>First Name</label><input type="text" placeholder="Rahul" required></div>
+                            <div class="fg"><label>Last Name</label><input type="text" placeholder="Sharma"></div>
+                        </div>
+                        <div class="fg"><label>Email</label><input type="email" placeholder="rahul@email.com" required></div>
+                        <div class="fg"><label>Phone</label><input type="tel" placeholder="+91 XXXXX XXXXX"></div>
+                        <div class="fg">
+                            <label>Subject</label>
+                            <select>
+                                <option value="">Select subject</option>
+                                <option>Admission Enquiry</option>
+                                <option>Course Information</option>
+                                <option>Fee &amp; Scholarship</option>
+                                <option>Transfer Certificate</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="fg"><label>Message</label><textarea rows="4" placeholder="Write your message..." required></textarea></div>
+                        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;font-size:.95rem;padding:14px">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- MAP PLACEHOLDER -->
+<section style="padding:0 0 80px">
+    <div class="pw">
+        <h2 class="sec-h" style="text-align:center;margin-bottom:28px">Find <span>Our Campus</span></h2>
+        <div class="map-box" data-aos="fade-up">
+            <div class="map-grid-bg"></div>
+            <div class="map-pin-wrap">
+                <div class="map-pin"><i class="fas fa-map-marker-alt"></i></div>
+                <div class="map-shadow"></div>
+            </div>
+            <div class="map-info-card">
+                <h3>SBNM Polytechnic</h3>
+                <p>Gevrai Tanda, Paithan Road, Aurangabad, Maharashtra</p>
+                <a href="https://maps.google.com/?q=Gevrai+Tanda+Paithan+Road+Aurangabad" target="_blank" class="btn btn-primary" style="margin-top:12px;padding:10px 20px">
+                    <i class="fas fa-directions"></i> Get Directions
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.page-hero { background:linear-gradient(140deg,#edfbf2 0%,#fefefe 55%,#fefbe8 100%);padding:72px 0 56px;border-bottom:1px solid var(--border); }
+.ph-inner { text-align:center; }
+.sec{padding:72px 0}
+.contact-layout { display:grid;grid-template-columns:1fr 1.4fr;gap:40px;align-items:start; }
+.ci-col { display:grid;grid-template-columns:1fr 1fr;gap:14px; }
+.ci-card { background:white;border-radius:14px;border:1px solid var(--border);padding:22px;transition:all .3s; }
+.ci-card:hover { transform:translateY(-3px);box-shadow:0 10px 28px rgba(0,0,0,.07); }
+.ci-ic { width:42px;height:42px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:1rem;margin-bottom:12px; }
+.ci-card h3 { font-family:'Poppins';font-size:.88rem;font-weight:700;color:var(--dark);margin-bottom:6px; }
+.ci-card p { font-size:.82rem;color:var(--muted);line-height:1.55; }
+.dept-box { background:white;border-radius:14px;border:1px solid var(--border);overflow:hidden; }
+.db-head { background:var(--primary);color:white;padding:13px 18px;font-weight:700;font-size:.84rem; }
+.db-row { display:flex;justify-content:space-between;align-items:center;padding:10px 18px;border-bottom:1px solid var(--border);font-size:.82rem; }
+.db-row:last-child { border-bottom:none; }
+.db-row span { color:var(--muted);display:flex;align-items:center;gap:7px; }
+.cform-card { background:white;border-radius:22px;padding:36px;border:1px solid var(--border);box-shadow:0 8px 36px rgba(26,92,56,.06); }
+.fg-row { display:grid;grid-template-columns:1fr 1fr;gap:14px; }
+.fg { display:flex;flex-direction:column;margin-bottom:16px; }
+.fg label { font-size:.79rem;font-weight:600;color:var(--dark);margin-bottom:6px; }
+.fg input,.fg select,.fg textarea { padding:11px 13px;border:1.5px solid var(--border);border-radius:9px;font-size:.86rem;font-family:inherit;outline:none;transition:border-color .2s;resize:vertical; }
+.fg input:focus,.fg select:focus,.fg textarea:focus { border-color:var(--primary);box-shadow:0 0 0 3px rgba(26,92,56,.07); }
+.map-box { background:linear-gradient(135deg,#edfbf2,#f0fdf4);border-radius:22px;height:320px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;gap:40px;position:relative;overflow:hidden;flex-wrap:wrap;padding:24px; }
+.map-grid-bg { position:absolute;inset:0;background-image:linear-gradient(rgba(26,92,56,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(26,92,56,.06) 1px,transparent 1px);background-size:36px 36px; }
+.map-pin-wrap { position:relative;z-index:1; }
+.map-pin { font-size:3.5rem;color:var(--primary);animation:pinBounce 2s ease-in-out infinite; }
+@keyframes pinBounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
+.map-shadow { width:36px;height:10px;background:rgba(26,92,56,.2);border-radius:50%;margin:0 auto;animation:shadowPulse 2s ease-in-out infinite; }
+@keyframes shadowPulse { 0%,100%{transform:scaleX(1);opacity:.5} 50%{transform:scaleX(1.3);opacity:1} }
+.map-info-card { position:relative;z-index:1;background:white;border-radius:16px;padding:22px 26px;border:1px solid var(--border);box-shadow:0 6px 20px rgba(0,0,0,.07);max-width:280px; }
+.map-info-card h3 { font-family:'Poppins';font-size:1rem;font-weight:700;color:var(--dark);margin-bottom:5px; }
+.map-info-card p { font-size:.83rem;color:var(--muted);line-height:1.5; }
+@media(max-width:1000px) { .contact-layout{grid-template-columns:1fr} }
+@media(max-width:640px) { .ci-col{grid-template-columns:1fr} .dept-box{grid-column:1} .fg-row{grid-template-columns:1fr} .map-box{flex-direction:column;height:auto;gap:20px} }
+</style>
+<script>
+document.getElementById('cForm').addEventListener('submit',e=>{
+    e.preventDefault();
+    const btn=e.target.querySelector('button');
+    btn.innerHTML='<i class="fas fa-check"></i> Sent!';
+    btn.style.background='linear-gradient(135deg,#15803d,#166534)';
+    setTimeout(()=>{btn.innerHTML='<i class="fas fa-paper-plane"></i> Send Message';btn.style.background='';e.target.reset();},3000);
+});
+</script>

@@ -1,0 +1,35 @@
+<div class="err-page">
+    <div class="err-bg"><div class="err-orb o1"></div><div class="err-orb o2"></div></div>
+    <div class="err-inner" data-aos="fade-up">
+        <div class="err-icon"><i class="fas fa-graduation-cap"></i></div>
+        <div class="err-num">404</div>
+        <h1>Page Not Found</h1>
+        <p>Looks like this page went on a field trip! The page you're looking for doesn't exist or may have moved.</p>
+        <div class="err-btns">
+            <a href="/" class="btn btn-primary"><i class="fas fa-home"></i> Go Home</a>
+            <a href="/chat" class="btn btn-outline"><i class="fas fa-robot"></i> Ask SBNM AI</a>
+        </div>
+        <div class="err-links">
+            <a href="/courses"><i class="fas fa-book"></i> Courses</a>
+            <a href="/admissions"><i class="fas fa-file-alt"></i> Admissions</a>
+            <a href="/contact"><i class="fas fa-envelope"></i> Contact</a>
+        </div>
+    </div>
+</div>
+<style>
+.err-page { min-height:calc(100vh - var(--nav-h) - 80px);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:60px 24px; }
+.err-bg { position:absolute;inset:0;pointer-events:none; }
+.err-orb { position:absolute;border-radius:50%;filter:blur(60px);opacity:.25; }
+.o1 { width:380px;height:380px;background:radial-gradient(circle,#227a4a,#1a5c38);top:-100px;left:-100px; }
+.o2 { width:280px;height:280px;background:radial-gradient(circle,#f59e0b,#d97706);bottom:-80px;right:-80px; }
+.err-inner { position:relative;z-index:1;text-align:center;max-width:520px; }
+.err-icon { width:88px;height:88px;background:linear-gradient(135deg,var(--primary),var(--primary-light));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.9rem;color:white;margin:0 auto 24px;box-shadow:0 10px 36px rgba(26,92,56,.3);animation:float 3s ease-in-out infinite; }
+@keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
+.err-num { font-family:'Poppins';font-size:clamp(5rem,15vw,9rem);font-weight:900;line-height:1;background:linear-gradient(135deg,var(--primary),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:12px; }
+.err-inner h1 { font-family:'Poppins';font-size:1.7rem;font-weight:800;color:var(--dark);margin-bottom:13px; }
+.err-inner p { color:var(--muted);line-height:1.8;margin-bottom:32px; }
+.err-btns { display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:28px; }
+.err-links { display:flex;gap:20px;justify-content:center;flex-wrap:wrap; }
+.err-links a { color:var(--primary);text-decoration:none;font-weight:600;font-size:.88rem;display:flex;align-items:center;gap:6px;transition:color .2s; }
+.err-links a:hover { color:var(--accent-dark); }
+</style>

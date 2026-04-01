@@ -1,0 +1,272 @@
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-bg">
+        <div class="orb orb1"></div>
+        <div class="orb orb2"></div>
+        <div class="grid-lines"></div>
+    </div>
+    <div class="pw hero-inner">
+        <div class="hero-text" data-aos="fade-right">
+            <div class="sec-tag"><i class="fas fa-award"></i> MSBTE Affiliated · DTE Approved</div>
+            <h1 class="hero-h1">
+                Shri Bhairavnath<br>
+                <span class="gtext">Nisarg Mandals</span><br>
+                Polytechnic
+            </h1>
+            <p class="hero-p">
+                Diploma in Engineering &amp; Technology — shaping skilled engineers at
+                <strong>Gevrai Tanda, Paithan Road, Aurangabad</strong> since our founding.
+            </p>
+            <div class="hero-btns">
+                <a href="/admissions" class="btn btn-primary"><i class="fas fa-file-alt"></i> Apply Now</a>
+                <a href="/courses" class="btn btn-outline"><i class="fas fa-book-open"></i> Our Courses</a>
+            </div>
+            <div class="hero-trust">
+                <span><i class="fas fa-check-circle"></i> Industry-Ready</span>
+                <span><i class="fas fa-check-circle"></i> Placement Support</span>
+                <span><i class="fas fa-check-circle"></i> Modern Labs</span>
+            </div>
+        </div>
+
+        <div class="hero-card-col" data-aos="fade-left" data-aos-delay="150">
+            <div class="h-card main-card">
+                <div class="mc-header">
+                    <div class="mc-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <div>
+                        <div class="mc-name">SBNM Polytechnic</div>
+                        <div class="mc-addr"><i class="fas fa-map-marker-alt"></i> Aurangabad, Maharashtra</div>
+                    </div>
+                </div>
+                <div class="mc-stats">
+                    <div class="mcs"><span data-count="1000">0</span>+<div>Students</div></div>
+                    <div class="mcs"><span data-count="5">0</span><div>Branches</div></div>
+                    <div class="mcs"><span data-count="95">0</span>%<div>Placement</div></div>
+                </div>
+                <div class="mc-badges">
+                    <span><i class="fas fa-certificate"></i> MSBTE Affiliated</span>
+                    <span><i class="fas fa-shield-alt"></i> DTE Approved</span>
+                </div>
+            </div>
+            <div class="float-card fc-ai" data-aos="fade-up" data-aos-delay="350">
+                <div class="fc-icon-wrap ai-icon"><i class="fas fa-robot"></i></div>
+                <div><div class="fc-title">SBNM AI</div><div class="fc-sub">Ask anything 24/7</div></div>
+            </div>
+            <div class="float-card fc-adm" data-aos="fade-up" data-aos-delay="500">
+                <div class="fc-icon-wrap adm-icon"><i class="fas fa-calendar-check"></i></div>
+                <div><div class="fc-title">Admissions Open</div><div class="fc-sub">2026–27 Batch</div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- STATS STRIP -->
+<section class="stats-strip">
+    <div class="pw stats-row">
+        <div class="stat" data-aos="fade-up">
+            <div class="stat-n"><span data-count="1000">0</span>+</div>
+            <div class="stat-l">Students Enrolled</div>
+        </div>
+        <div class="stat" data-aos="fade-up" data-aos-delay="80">
+            <div class="stat-n"><span data-count="5">0</span></div>
+            <div class="stat-l">Diploma Branches</div>
+        </div>
+        <div class="stat" data-aos="fade-up" data-aos-delay="160">
+            <div class="stat-n"><span data-count="60">0</span>+</div>
+            <div class="stat-l">Qualified Faculty</div>
+        </div>
+        <div class="stat" data-aos="fade-up" data-aos-delay="240">
+            <div class="stat-n"><span data-count="95">0</span>%</div>
+            <div class="stat-l">Placement Rate</div>
+        </div>
+        <div class="stat" data-aos="fade-up" data-aos-delay="320">
+            <div class="stat-n"><span data-count="10">0</span>+</div>
+            <div class="stat-l">Years of Excellence</div>
+        </div>
+    </div>
+</section>
+
+<!-- COURSES PREVIEW -->
+<section class="sec" style="background:white">
+    <div class="pw">
+        <div class="sec-center mb48" data-aos="fade-up">
+            <div class="sec-tag"><i class="fas fa-book"></i> Programmes</div>
+            <h2 class="sec-h">Our <span>Diploma Courses</span></h2>
+            <p class="sec-sub">MSBTE-approved 3-year diploma programmes designed for real-world engineering skills.</p>
+        </div>
+        <div class="courses-grid">
+            <%
+            const courses = [
+              { icon:'fa-laptop-code',  color:'#1a5c38', bg:'rgba(26,92,56,0.08)',  name:'Computer Science Engineering',    code:'CO', seats:60 },
+              { icon:'fa-cogs',         color:'#b45309', bg:'rgba(180,83,9,0.08)',   name:'Mechanical Engineering',          code:'ME', seats:60 },
+              { icon:'fa-hard-hat',     color:'#0369a1', bg:'rgba(3,105,161,0.08)', name:'Civil Engineering',               code:'CE', seats:60 },
+              { icon:'fa-bolt',         color:'#7c3aed', bg:'rgba(124,58,237,0.08)',name:'Electrical Engineering',          code:'EE', seats:60 },
+              { icon:'fa-seedling',     color:'#15803d', bg:'rgba(21,128,61,0.08)', name:'Food Technology',                 code:'FT', seats:60 },
+            ];
+            courses.forEach((c,i) => { %>
+            <div class="course-card card" data-aos="fade-up" data-aos-delay="<%= i*70 %>">
+                <div class="cc-icon" style="background:<%= c.bg %>;color:<%= c.color %>">
+                    <i class="fas <%= c.icon %>"></i>
+                </div>
+                <div class="cc-code" style="color:<%= c.color %>"><%= c.code %></div>
+                <h3 class="cc-name"><%= c.name %></h3>
+                <div class="cc-meta">
+                    <span><i class="fas fa-users"></i> <%= c.seats %> Seats</span>
+                    <span><i class="fas fa-clock"></i> 3 Years</span>
+                </div>
+                <a href="/courses" class="cc-link" style="color:<%= c.color %>">
+                    Details <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            <% }) %>
+        </div>
+        <div style="text-align:center;margin-top:36px" data-aos="fade-up">
+            <a href="/courses" class="btn btn-primary"><i class="fas fa-th-list"></i> View All Courses</a>
+        </div>
+    </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="sec">
+    <div class="pw">
+        <div class="sec-center mb48" data-aos="fade-up">
+            <div class="sec-tag gold"><i class="fas fa-star"></i> Why SBNM?</div>
+            <h2 class="sec-h">The <span>SBNM Advantage</span></h2>
+            <p class="sec-sub">A unique blend of rigorous academics, hands-on labs, research culture, and career support.</p>
+        </div>
+        <div class="why-grid">
+            <%
+            const feats = [
+              { icon:'fa-flask',              color:'#1a5c38', title:'Research Centre',         desc:'Dedicated research centre fostering innovation and applied technical studies in every department.' },
+              { icon:'fa-book',               color:'#0369a1', title:'Well-Stocked Library',    desc:'Rich library with textbooks, journals, and digital resources supporting student learning round the clock.' },
+              { icon:'fa-industry',           color:'#b45309', title:'Industry Curriculum',     desc:'Courses designed in sync with industry requirements for maximum employability after graduation.' },
+              { icon:'fa-seedling',           color:'#15803d', title:'Food Technology Focus',   desc:'One of few polytechnic colleges in the region offering a specialized Food Technology programme.' },
+              { icon:'fa-briefcase',          color:'#7c3aed', title:'Placement Cell',          desc:'Active placement cell connecting students with top manufacturing, IT, and food industry companies.' },
+              { icon:'fa-chalkboard-teacher', color:'#b91c1c', title:'Expert Faculty',          desc:'Qualified and experienced faculty committed to student success, practical learning, and mentorship.' },
+            ];
+            feats.forEach((f,i) => { %>
+            <div class="why-card card" data-aos="fade-up" data-aos-delay="<%= i*70 %>">
+                <div class="why-icon" style="background:<%= f.color %>14;color:<%= f.color %>">
+                    <i class="fas <%= f.icon %>"></i>
+                </div>
+                <h3 class="why-title"><%= f.title %></h3>
+                <p class="why-desc"><%= f.desc %></p>
+            </div>
+            <% }) %>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-sec">
+    <div class="pw">
+        <div class="cta-box" data-aos="fade-up">
+            <div class="cta-deco cta-deco1"></div>
+            <div class="cta-deco cta-deco2"></div>
+            <div class="cta-txt">
+                <h2>Start Your Engineering Journey</h2>
+                <p>Admissions for 2026–27 are open. Apply early and secure your seat at SBNM Polytechnic.</p>
+            </div>
+            <div class="cta-actions">
+                <a href="/admissions" class="btn btn-accent">Apply Now <i class="fas fa-arrow-right"></i></a>
+                <a href="/chat" class="btn" style="border:2px solid rgba(255,255,255,0.4);color:white;"><i class="fas fa-robot"></i> Ask SBNM AI</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+/* ── HERO ── */
+.hero { position:relative; min-height:calc(100vh - var(--nav-h)); display:flex; align-items:center; overflow:hidden; background:linear-gradient(140deg,#edfbf2 0%,#fefefe 55%,#fefbe8 100%); }
+.hero-bg { position:absolute;inset:0;pointer-events:none; }
+.orb { position:absolute;border-radius:50%;filter:blur(72px);opacity:.3; }
+.orb1 { width:560px;height:560px;background:radial-gradient(circle,#227a4a,#1a5c38);top:-180px;left:-180px;animation:drift 9s ease-in-out infinite; }
+.orb2 { width:380px;height:380px;background:radial-gradient(circle,#f59e0b,#d97706);bottom:-120px;right:-80px;animation:drift 11s ease-in-out infinite reverse; }
+@keyframes drift { 0%,100%{transform:translate(0,0)} 33%{transform:translate(24px,-16px)} 66%{transform:translate(-16px,24px)} }
+.grid-lines { position:absolute;inset:0;background-image:linear-gradient(rgba(26,92,56,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(26,92,56,0.04) 1px,transparent 1px);background-size:56px 56px; }
+.hero-inner { position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;padding-top:56px;padding-bottom:56px; }
+.hero-h1 { font-family:'Poppins',sans-serif;font-size:clamp(1.9rem,5vw,3.6rem);font-weight:900;line-height:1.1;color:var(--dark);margin-bottom:20px; }
+.gtext { background:linear-gradient(135deg,var(--primary),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text; }
+.hero-p { color:var(--muted);font-size:1.05rem;line-height:1.8;margin-bottom:32px; }
+.hero-btns { display:flex;gap:14px;flex-wrap:wrap;margin-bottom:24px; }
+.hero-trust { display:flex;flex-wrap:wrap;gap:18px;font-size:0.82rem;color:var(--muted);font-weight:500; }
+.hero-trust span { display:flex;align-items:center;gap:6px; }
+.hero-trust i { color:var(--primary); }
+
+/* hero card */
+.hero-card-col { position:relative;height:400px; }
+.main-card { position:absolute;top:16px;left:0;right:0;background:white;border-radius:22px;padding:28px;box-shadow:0 20px 56px rgba(26,92,56,0.13);border:1px solid var(--border); }
+.mc-header { display:flex;align-items:center;gap:14px;margin-bottom:24px; }
+.mc-icon { width:52px;height:52px;background:linear-gradient(135deg,var(--primary),var(--primary-light));border-radius:13px;display:flex;align-items:center;justify-content:center;color:white;font-size:1.4rem; }
+.mc-name { font-family:'Poppins';font-weight:700;font-size:1rem;color:var(--dark); }
+.mc-addr { font-size:0.76rem;color:var(--muted);margin-top:3px; }
+.mc-stats { display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px; }
+.mcs { background:var(--bg);border-radius:11px;padding:14px 10px;text-align:center; }
+.mcs span { font-family:'Poppins';font-size:1.4rem;font-weight:900;color:var(--primary); }
+.mcs div { font-size:0.72rem;color:var(--muted);margin-top:2px; }
+.mc-badges { display:flex;gap:8px;flex-wrap:wrap; }
+.mc-badges span { background:rgba(26,92,56,0.07);color:var(--primary);border-radius:100px;padding:5px 12px;font-size:0.75rem;font-weight:600;display:flex;align-items:center;gap:5px; }
+.float-card { position:absolute;display:flex;align-items:center;gap:10px;background:white;border-radius:14px;padding:12px 16px;box-shadow:0 8px 28px rgba(0,0,0,0.1);border:1px solid var(--border);font-size:0.8rem;z-index:10; }
+.fc-ai { bottom:28px;left:-16px; }
+.fc-adm { bottom:96px;right:-16px; }
+.fc-icon-wrap { width:36px;height:36px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0; }
+.ai-icon { background:rgba(26,92,56,0.12);color:var(--primary); }
+.adm-icon { background:rgba(217,119,6,0.12);color:var(--accent-dark); }
+.fc-title { font-weight:700;color:var(--dark); }
+.fc-sub { font-size:0.7rem;color:var(--muted); }
+
+/* strip */
+.stats-strip { background:linear-gradient(135deg,var(--primary) 0%,var(--primary-light) 100%);padding:36px 0; }
+.stats-row { display:grid;grid-template-columns:repeat(5,1fr);gap:20px; }
+.stat { text-align:center;color:white; }
+.stat-n { font-family:'Poppins';font-size:2.2rem;font-weight:900;line-height:1;margin-bottom:6px; }
+.stat-l { font-size:0.82rem;opacity:.85;font-weight:500; }
+
+/* courses */
+.mb48 { margin-bottom:48px; }
+.courses-grid { display:grid;grid-template-columns:repeat(5,1fr);gap:18px; }
+.course-card { padding:24px;display:flex;flex-direction:column;gap:0; }
+.cc-icon { width:52px;height:52px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:14px; }
+.cc-code { font-size:0.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:7px; }
+.cc-name { font-family:'Poppins';font-size:0.9rem;font-weight:700;color:var(--dark);margin-bottom:12px;line-height:1.4;flex-grow:1; }
+.cc-meta { display:flex;flex-direction:column;gap:5px;font-size:0.78rem;color:var(--muted);margin-bottom:14px; }
+.cc-meta span { display:flex;align-items:center;gap:6px; }
+.cc-link { font-size:0.82rem;font-weight:700;text-decoration:none;display:flex;align-items:center;gap:5px;transition:gap .2s; }
+.cc-link:hover { gap:10px; }
+
+/* why */
+.why-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:22px; }
+.why-card { padding:28px; }
+.why-icon { width:52px;height:52px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:18px; }
+.why-title { font-family:'Poppins';font-size:0.95rem;font-weight:700;color:var(--dark);margin-bottom:9px; }
+.why-desc { font-size:0.84rem;color:var(--muted);line-height:1.75; }
+
+/* CTA */
+.cta-sec { padding:0 0 72px; }
+.cta-box { background:linear-gradient(135deg,var(--primary-dark) 0%,var(--primary) 100%);border-radius:22px;padding:52px 44px;display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap;position:relative;overflow:hidden; }
+.cta-deco { position:absolute;border-radius:50%; }
+.cta-deco1 { width:220px;height:220px;background:rgba(255,255,255,0.05);top:-80px;right:-40px; }
+.cta-deco2 { width:160px;height:160px;background:rgba(255,255,255,0.04);bottom:-60px;left:25%; }
+.cta-txt { position:relative;z-index:1; }
+.cta-txt h2 { font-family:'Poppins';font-size:1.7rem;font-weight:800;color:white;margin-bottom:6px; }
+.cta-txt p { color:rgba(255,255,255,0.78);font-size:0.95rem; }
+.cta-actions { display:flex;gap:14px;flex-wrap:wrap;position:relative;z-index:1; }
+
+/* responsive */
+@media(max-width:1100px) { .courses-grid { grid-template-columns:repeat(3,1fr); } }
+@media(max-width:900px) {
+    .hero-inner { grid-template-columns:1fr; padding-top:40px; }
+    .hero-card-col { display:none; }
+    .stats-row { grid-template-columns:repeat(3,1fr); }
+    .why-grid { grid-template-columns:1fr 1fr; }
+}
+@media(max-width:640px) {
+    .stats-row { grid-template-columns:1fr 1fr; }
+    .courses-grid { grid-template-columns:1fr 1fr; }
+    .why-grid { grid-template-columns:1fr; }
+    .cta-box { padding:36px 24px; }
+    .hero-btns { flex-direction:column; }
+}
+@media(max-width:380px) {
+    .courses-grid { grid-template-columns:1fr; }
+}
+</style>

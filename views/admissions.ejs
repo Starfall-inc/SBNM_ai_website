@@ -1,0 +1,164 @@
+<!-- PAGE HERO -->
+<div class="page-hero">
+    <div class="pw">
+        <div class="ph-inner" data-aos="fade-up">
+            <div class="sec-tag gold"><i class="fas fa-file-alt"></i> Admissions 2026–27</div>
+            <h1 class="sec-h">Join <span>SBNM Polytechnic</span></h1>
+            <p class="sec-sub">Applications for the 2026–27 academic year are now open via DTE Maharashtra CAP rounds.</p>
+            <div class="adm-chips">
+                <span><i class="fas fa-check-circle"></i> Online DTE Portal</span>
+                <span><i class="fas fa-check-circle"></i> Merit-Based CAP</span>
+                <span><i class="fas fa-check-circle"></i> MSBTE Affiliated</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- STEPS -->
+<section class="sec" style="background:white">
+    <div class="pw">
+        <div class="sec-center mb48" data-aos="fade-up">
+            <div class="sec-tag"><i class="fas fa-list-ol"></i> Process</div>
+            <h2 class="sec-h">How to <span>Apply</span></h2>
+        </div>
+        <div class="steps-row">
+            <% const steps = [
+              { n:1, icon:'fa-user-plus',  color:'#1a5c38', t:'Register Online',    d:'Create an account on DTE Maharashtra Polytechnic Admission portal and fill in your personal & academic details.' },
+              { n:2, icon:'fa-file-alt',   color:'#0369a1', t:'Submit Application', d:'Complete the form with course preferences (CO/ME/CE/EE/FT) and upload required scanned documents.' },
+              { n:3, icon:'fa-rupee-sign', color:'#b45309', t:'Pay Fee (₹300)',     d:'Pay the non-refundable application fee of ₹300 online via UPI, net banking, or debit/credit card.' },
+              { n:4, icon:'fa-graduation-cap',color:'#7c3aed',t:'Confirm Admission',d:'After merit list, visit SBNM Polytechnic with original documents for verification and seat confirmation.' },
+            ]; %>
+            <% steps.forEach((s,i) => { %>
+            <div class="step-card" data-aos="fade-up" data-aos-delay="<%= i*90 %>">
+                <div class="step-n" style="background:linear-gradient(135deg,<%= s.color %>,<%= s.color %>cc)"><%= s.n %></div>
+                <div class="step-ic" style="background:<%= s.color %>14;color:<%= s.color %>"><i class="fas <%= s.icon %>"></i></div>
+                <h3><%= s.t %></h3>
+                <p><%= s.d %></p>
+            </div>
+            <% if(i<3) { %><div class="step-arrow"><i class="fas fa-chevron-right"></i></div><% } %>
+            <% }) %>
+        </div>
+    </div>
+</section>
+
+<!-- ELIGIBILITY + DOCS -->
+<section class="sec">
+    <div class="pw">
+        <div class="elig-grid">
+            <div class="elig-box" data-aos="fade-right">
+                <div class="eb-head" style="background:linear-gradient(135deg,var(--primary),var(--primary-light))">
+                    <i class="fas fa-check-circle"></i><h3>Eligibility Criteria</h3>
+                </div>
+                <ul class="eb-list">
+                    <li><i class="fas fa-check" style="color:#15803d"></i> SSC (10th) passed from Maharashtra Board or equivalent</li>
+                    <li><i class="fas fa-check" style="color:#15803d"></i> Minimum <strong>35%</strong> aggregate marks</li>
+                    <li><i class="fas fa-check" style="color:#15803d"></i> Must have studied <strong>Maths &amp; Science</strong></li>
+                    <li><i class="fas fa-check" style="color:#15803d"></i> Age: maximum <strong>23 years</strong> (relaxation for SC/ST)</li>
+                    <li><i class="fas fa-check" style="color:#15803d"></i> Indian national / resident of Maharashtra</li>
+                </ul>
+            </div>
+            <div class="elig-box" data-aos="fade-left" data-aos-delay="80">
+                <div class="eb-head" style="background:linear-gradient(135deg,var(--accent-dark),var(--accent))">
+                    <i class="fas fa-folder-open"></i><h3>Required Documents</h3>
+                </div>
+                <ul class="eb-list">
+                    <li><i class="fas fa-file-alt" style="color:var(--accent-dark)"></i> SSC Marksheet (original + 2 copies)</li>
+                    <li><i class="fas fa-file-alt" style="color:var(--accent-dark)"></i> School Leaving Certificate</li>
+                    <li><i class="fas fa-file-alt" style="color:var(--accent-dark)"></i> Domicile / Birth Certificate</li>
+                    <li><i class="fas fa-file-alt" style="color:var(--accent-dark)"></i> Caste Certificate (if applicable)</li>
+                    <li><i class="fas fa-file-alt" style="color:var(--accent-dark)"></i> Aadhar Card copy</li>
+                    <li><i class="fas fa-file-alt" style="color:var(--accent-dark)"></i> 4 passport-size photographs</li>
+                    <li><i class="fas fa-file-alt" style="color:var(--accent-dark)"></i> Income certificate (for scholarship)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ENQUIRY -->
+<section class="sec" style="background:white">
+    <div class="pw">
+        <div class="enq-grid">
+            <div class="enq-info" data-aos="fade-right">
+                <div class="sec-tag"><i class="fas fa-headset"></i> Get Help</div>
+                <h2 class="sec-h" style="font-size:2rem;text-align:left">Have <span>Questions?</span></h2>
+                <p style="color:var(--muted);line-height:1.8;margin-bottom:22px;font-size:.92rem">Our admission counselors will help guide you through the process. Fill the form or reach us directly.</p>
+                <div class="enq-contacts">
+                    <div><i class="fas fa-phone" style="color:var(--accent-dark)"></i> +91 240 230 3030</div>
+                    <div><i class="fas fa-envelope" style="color:var(--accent-dark)"></i> info@sbnmpoly.org</div>
+                    <div><i class="fas fa-map-marker-alt" style="color:var(--accent-dark)"></i> Gevrai Tanda, Paithan Road, Aurangabad</div>
+                    <div><i class="fas fa-clock" style="color:var(--accent-dark)"></i> Mon–Sat: 9 AM – 5 PM</div>
+                </div>
+            </div>
+            <form class="enq-form" id="admForm" data-aos="fade-left" data-aos-delay="80">
+                <div class="fg-row">
+                    <div class="fg"><label>Full Name</label><input type="text" placeholder="Your name" required></div>
+                    <div class="fg"><label>Mobile</label><input type="tel" placeholder="+91 XXXXX XXXXX" required></div>
+                </div>
+                <div class="fg"><label>Email</label><input type="email" placeholder="your@email.com"></div>
+                <div class="fg">
+                    <label>Preferred Course</label>
+                    <select>
+                        <option value="">Select Programme</option>
+                        <option>Computer Science Engineering (CO)</option>
+                        <option>Mechanical Engineering (ME)</option>
+                        <option>Civil Engineering (CE)</option>
+                        <option>Electrical Engineering (EE)</option>
+                        <option>Food Technology (FT)</option>
+                    </select>
+                </div>
+                <div class="fg"><label>Message / Query</label><textarea rows="3" placeholder="Any questions about admissions..."></textarea></div>
+                <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">
+                    <i class="fas fa-paper-plane"></i> Send Enquiry
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<style>
+.page-hero { background:linear-gradient(140deg,#edfbf2 0%,#fefefe 55%,#fefbe8 100%);padding:72px 0 56px;border-bottom:1px solid var(--border); }
+.ph-inner { text-align:center; }
+.adm-chips { display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:20px; }
+.adm-chips span { display:inline-flex;align-items:center;gap:7px;background:white;border:1px solid var(--border);border-radius:100px;padding:7px 16px;font-size:0.82rem;font-weight:600; }
+.adm-chips i { color:var(--primary); }
+.sec { padding:72px 0; }
+.sec-center{text-align:center} .mb48{margin-bottom:48px}
+.steps-row { display:flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:center; }
+.step-card { background:white;border-radius:18px;border:1px solid var(--border);padding:28px 20px;text-align:center;flex:1;min-width:160px;max-width:200px;transition:all .3s; }
+.step-card:hover { transform:translateY(-5px);box-shadow:0 16px 40px rgba(26,92,56,.1); }
+.step-n { width:32px;height:32px;border-radius:50%;color:white;font-family:'Poppins';font-weight:800;font-size:.95rem;display:flex;align-items:center;justify-content:center;margin:0 auto 14px; }
+.step-ic { width:52px;height:52px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin:0 auto 14px; }
+.step-card h3 { font-family:'Poppins';font-size:.9rem;font-weight:700;color:var(--dark);margin-bottom:8px; }
+.step-card p { font-size:.78rem;color:var(--muted);line-height:1.65; }
+.step-arrow { font-size:1.1rem;color:var(--border);flex-shrink:0; }
+.elig-grid { display:grid;grid-template-columns:1fr 1fr;gap:22px; }
+.elig-box { border-radius:18px;overflow:hidden;border:1px solid var(--border); }
+.eb-head { padding:22px 26px;display:flex;align-items:center;gap:12px;color:white; }
+.eb-head i { font-size:1.4rem; }
+.eb-head h3 { font-family:'Poppins';font-size:1rem;font-weight:700; }
+.eb-list { list-style:none;padding:20px 26px;display:flex;flex-direction:column;gap:0; }
+.eb-list li { display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid var(--border);font-size:.86rem;color:var(--muted); }
+.eb-list li:last-child { border-bottom:none; }
+.eb-list li i { flex-shrink:0;margin-top:2px; }
+.enq-grid { display:grid;grid-template-columns:1fr 1.2fr;gap:56px;align-items:start; }
+.enq-contacts { display:flex;flex-direction:column;gap:13px; }
+.enq-contacts div { display:flex;align-items:center;gap:12px;font-size:.88rem;color:var(--muted); }
+.enq-form { background:var(--bg);border-radius:20px;padding:32px;border:1px solid var(--border); }
+.fg-row { display:grid;grid-template-columns:1fr 1fr;gap:14px; }
+.fg { display:flex;flex-direction:column;margin-bottom:16px; }
+.fg label { font-size:.8rem;font-weight:600;color:var(--dark);margin-bottom:7px; }
+.fg input,.fg select,.fg textarea { padding:11px 13px;border:1.5px solid var(--border);border-radius:9px;font-size:.86rem;font-family:inherit;outline:none;transition:border-color .2s;resize:vertical;background:white; }
+.fg input:focus,.fg select:focus,.fg textarea:focus { border-color:var(--primary);box-shadow:0 0 0 3px rgba(26,92,56,.07); }
+@media(max-width:900px) { .enq-grid{grid-template-columns:1fr} .steps-row{flex-direction:column;align-items:stretch} .step-card{max-width:100%} .step-arrow{transform:rotate(90deg);text-align:center} }
+@media(max-width:640px) { .elig-grid{grid-template-columns:1fr} .fg-row{grid-template-columns:1fr} }
+</style>
+<script>
+document.getElementById('admForm').addEventListener('submit',e=>{
+    e.preventDefault();
+    const btn=e.target.querySelector('button');
+    btn.innerHTML='<i class="fas fa-check"></i> Enquiry Sent!';
+    btn.style.background='linear-gradient(135deg,#15803d,#166534)';
+    setTimeout(()=>{btn.innerHTML='<i class="fas fa-paper-plane"></i> Send Enquiry';btn.style.background='';e.target.reset();},3000);
+});
+</script>
